@@ -9,15 +9,16 @@ public class HorseRider : MonoBehaviour
     [SerializeField] TMP_Text theme;
     public void Run()
     {
-        if ( theme.text=="LGBT" )
+        if (theme.text=="LGBT")
         {
-            speed = Random.Range(1,10)*3.8f;
-            transform.Translate(0, 0, speed*Time.deltaTime);
+            Gallop(3.9f);
+            return;
         }
-        else 
-        {
-            speed = Random.Range(1,10)*4f;
-            transform.Translate(0, 0, speed*Time.deltaTime);
-        }
+        Gallop(4f);
+    }
+    void Gallop(float legStr)
+    {
+        speed = Random.Range(1,10)*legStr;
+        transform.Translate(0, 0, speed*Time.deltaTime);
     }
 }

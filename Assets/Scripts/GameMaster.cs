@@ -45,6 +45,7 @@ public class GameMaster : MonoBehaviour
     }
     public void ToTitle()
     {
+        GameDataManager.Instance.themeList.Clear();
         SceneManager.LoadScene("Title");
     }
 
