@@ -7,8 +7,18 @@ public class HorseRider : MonoBehaviour
 {
     float speed;
     [SerializeField] TMP_Text theme;
+    [SerializeField] Animator horseAnim;
+    private void Start() 
+    {
+        horseAnim.enabled = false;
+    }
+    public void HorseAnimEnable()
+    {
+        horseAnim.enabled = true;
+    }
     public void Run()
     {
+        horseAnim.Play(horseAnim.GetCurrentAnimatorStateInfo(0).shortNameHash);
         if (theme.text=="LGBT")
         {
             Gallop(3.9f);

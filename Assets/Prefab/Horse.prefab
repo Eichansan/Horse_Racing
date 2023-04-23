@@ -1080,6 +1080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theme: {fileID: 6684775033960060739}
+  horseAnim: {fileID: 6684775034274016434}
 --- !u!114 &6684775034251218138
 MonoBehaviour:
   m_ObjectHideFlags: 0

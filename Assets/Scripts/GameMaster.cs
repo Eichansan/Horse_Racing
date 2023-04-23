@@ -30,6 +30,7 @@ public class GameMaster : MonoBehaviour
     {
         gameSEManager.OnStartButton();
         isStarting = true;
+        for(int i=0; i<horse.Count; i++)horseRider[i].HorseAnimEnable();
         startButton.SetActive(false);
     }
     private void Update() 
