@@ -41,12 +41,13 @@ public class GameMaster : MonoBehaviour
         }
         else
         {
-            for(int i=0; i<horse.Count; i++)horseRider[i].Run();
+            for(int i=0; i<horse.Count; i++) horseRider[i].Run();
         }
     }
     public void ToTitle()
     {
         GameDataManager.Instance.themeList.Clear();
+        GameDataManager.Instance.cheatTheme.text = "";
         SceneManager.LoadScene("Title");
     }
 

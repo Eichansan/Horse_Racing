@@ -14,6 +14,7 @@ public class TitleManager : MonoBehaviour
     [SerializeField] Button decideButton;
     [SerializeField] GameObject Canvas;
     [SerializeField] TMP_InputField inputFieldPrefab;
+    [SerializeField] TMP_InputField cheatTheme;
     List<TMP_InputField> theme = new List<TMP_InputField>();  
     int themeMinSize = 1;
     int themeMaxSize = 18;
@@ -48,6 +49,7 @@ public class TitleManager : MonoBehaviour
     {
         titleSEManager.OnDecideButton();
         for(int i=0; i<theme.Count; i++)GameDataManager.Instance.themeList.Add(theme[i]);
+        GameDataManager.Instance.cheatTheme = cheatTheme;
         SceneManager.LoadScene("Game");
     }
 

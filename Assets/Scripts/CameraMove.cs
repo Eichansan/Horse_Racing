@@ -18,7 +18,7 @@ public class CameraMove : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             transform.SetParent(horses[nowNum].gameObject.transform,false);
             if (nowNum < horses.Count)nowNum++;

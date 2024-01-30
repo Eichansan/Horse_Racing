@@ -5,7 +5,8 @@ using TMPro;
 public class GameDataManager : MonoBehaviour
 {
     public List<TMP_InputField> themeList = new List<TMP_InputField>();
-    public static GameDataManager Instance { get; private set; }
+    public TMP_InputField cheatTheme;
+    public static GameDataManager Instance { get; set; }
     private void Awake()
     {
         if (Instance == null)

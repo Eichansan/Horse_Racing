@@ -6,11 +6,13 @@ using TMPro;
 public class HorseRider : MonoBehaviour
 {
     float speed;
+    string cheatTheme;
     [SerializeField] TMP_Text theme;
     [SerializeField] Animator horseAnim;
     private void Start() 
     {
         horseAnim.enabled = false;
+        cheatTheme = GameDataManager.Instance.cheatTheme.text;
     }
     public void HorseAnimEnable()
     {
@@ -19,9 +21,19 @@ public class HorseRider : MonoBehaviour
     public void Run()
     {
         horseAnim.Play(horseAnim.GetCurrentAnimatorStateInfo(0).shortNameHash);
-        if (theme.text=="LGBT")
+        if (Input.GetKey(KeyCode.L))
         {
-            Gallop(3.9f);
+            if (theme.text==cheatTheme)
+            {
+                Gallop(3*4.1f);
+                return;
+            }
+            Gallop(3*4f);
+            return;
+        }
+        if (theme.text==cheatTheme)
+        {
+            Gallop(4.1f);
             return;
         }
         Gallop(4f);
