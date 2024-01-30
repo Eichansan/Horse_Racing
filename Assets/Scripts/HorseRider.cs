@@ -21,7 +21,7 @@ public class HorseRider : MonoBehaviour
     public void Run()
     {
         horseAnim.Play(horseAnim.GetCurrentAnimatorStateInfo(0).shortNameHash);
-        if (Input.GetKey(KeyCode.L))
+        if (Input.GetKey(KeyCode.S))
         {
             if (theme.text==cheatTheme)
             {

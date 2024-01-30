@@ -59,11 +59,11 @@ public class TitleManager : MonoBehaviour
         theme.Last().gameObject.transform.SetParent(Canvas.transform,false);
         if (theme.Count < 10)
         {
-            theme.Last().gameObject.transform.Translate(0, -60f*(theme.Count-1), 0);
+            theme.Last().gameObject.transform.Translate(0, -60f*(theme.Count-1)*Screen.height/576, 0);
         }
         else
         {
-            theme.Last().gameObject.transform.Translate(560f, -60f*(theme.Count-10), 0);
+            theme.Last().gameObject.transform.Translate(560f*Screen.width/1024, -60f*(theme.Count-10)*Screen.height/576, 0);
         }
         if (theme.Count > themeMinSize) minusButton.interactable = true;
         if (theme.Count == themeMaxSize) plusButton.interactable = false;
